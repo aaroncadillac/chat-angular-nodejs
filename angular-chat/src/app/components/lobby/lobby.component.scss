@@ -1,0 +1,41 @@
+.lobby-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px auto;
+  grid-template-areas: 
+    "nav"
+    "list";
+  .header {
+    display: grid;
+    grid-area: nav;
+    background-color: var(--accent);
+    grid-template-columns: auto 40px;
+    grid-template-rows: auto;
+    grid-template-areas: "title theme-action";
+    align-items: center;
+    color: white;
+    .title {
+      grid-area: title;
+      padding-left: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .icon-container{
+      grid-area: theme-action;
+      justify-self: center;
+    }
+  }
+  .userlist {
+    height: 100%;
+    overflow-y: scroll;
+    .user {
+      display: block;
+      height: 40px;
+      &:hover {
+        background-color: var(--background-secondary);
+      }
+    }
+  }
+}

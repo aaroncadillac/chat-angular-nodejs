@@ -1,0 +1,69 @@
+.chat-container {
+  display:grid;
+  height: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 1fr 40px;
+  grid-template-areas: 
+    "header"
+    "chat"
+    "writter";
+  .header{
+    display: grid;
+    grid-area: header;
+    background-color: var(--accent);
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: auto;
+    grid-template-areas: "back-button username more";
+    align-items: center;
+    color: white;
+    .username {
+      grid-area: username;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    .icon-container{
+      justify-self: center;
+      &.left {
+        grid-area: back-button;
+      }
+      &.rigth {
+        grid-area: more;
+      }
+    }
+  }
+  .chat{
+    grid-area: chat;
+    overflow: hidden;
+  }
+  .writter {
+    grid-area: writter;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 40px;
+    grid-row: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-accent);
+    grid-template-areas: "text-area send";
+  }
+  .textbox {
+    grid-area: text-area;
+    font-size: 1.1rem;
+    padding-left: 5px;
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    &:focus{
+      outline: none;
+    }
+  }
+  .send-message {
+    grid-area: send;
+    justify-self: end;
+    height: 37px;
+    width: 37px;
+    border: none;
+    background-color: transparent;
+    color: var(--accent);
+    line-height: 0;
+  }
+}

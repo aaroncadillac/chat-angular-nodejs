@@ -1,0 +1,11 @@
+<section class="lobby-container">
+  <nav class="header">
+    <span class="title">Angular Chat</span>
+    <div class="icon-container">
+      <ng-material-icon icon="brightness_medium" size="2" ></ng-material-icon>
+    </div>
+  </nav>
+  <div class="userlist">
+    <span *ngFor="let usernameOfList of userlist" class="user">{{usernameOfList}}</span>
+  </div>
+</section>
