@@ -28,13 +28,19 @@
     }
   }
   .userlist {
+    grid-area: list;
     height: 100%;
     overflow-y: scroll;
+    background-color: var(--background);
     .user {
       display: block;
       height: 40px;
+      line-height: 30px;
+      padding: 5px;
+      box-sizing: border-box;
+      color: var(--text);
       &:hover {
-        background-color: var(--background-secondary);
+        background-color: var(--secondary-accent);
       }
     }
   }

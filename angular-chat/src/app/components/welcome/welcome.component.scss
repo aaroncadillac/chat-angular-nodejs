@@ -1,0 +1,30 @@
+.welcome-container{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--background);
+  .textarea {
+    color: var(--text);
+    .welcome-title {
+      font-size: 1.1rem;
+      text-align: center;
+      display: block;
+    }
+    .username-input {
+      background-color: transparent;
+      font-size: 1.3rem;
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 200;
+      padding-bottom: 2px;
+      border: none;
+      border-bottom: 1px solid var(--text-secondary);
+      color: var(--text);
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}
