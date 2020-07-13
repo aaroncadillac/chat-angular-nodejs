@@ -1,5 +1,6 @@
 {
   "name": "node-chat",
+  "description": "build ready to deploy at heroku",
   "version": "1.0.0",
   "main": "server.js",
   "license": "MPL-2.0",
