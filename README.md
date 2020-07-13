@@ -2,6 +2,8 @@
 
 A simple chat app using `angular`, `nodejs`, `express`, `scoket.io`, you can chat *in private* with other users and see thats users at lobby
 
+live in https://frozen-oasis-27882.herokuapp.com/
+
 - [chat-angular-nodejs](#chat-angular-nodejs)
   - [Requirements](#requirements)
   - [Installation](#installation)
