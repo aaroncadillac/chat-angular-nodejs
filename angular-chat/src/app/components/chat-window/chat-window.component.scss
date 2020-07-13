@@ -2,7 +2,7 @@
   display:grid;
   height: 100%;
   grid-template-columns: 100%;
-  grid-template-rows: 50px 1fr 40px;
+  grid-template-rows: 50px 1fr 45px;
   grid-template-areas: 
     "header"
     "chat"
@@ -16,15 +16,25 @@
     grid-template-areas: "back-button username more";
     align-items: center;
     color: white;
-    .username {
-      grid-area: username;
-      font-size: 1.2rem;
-      font-weight: 300;
+    .username-area {
+      display: flex;
+      flex-direction: column;
+      .username {
+        font-size: 1.2rem;
+        font-weight: 300;
+        justify-self: center;
+      }
+      .typing-message {
+        font-size: 0.8rem;
+        font-weight: 200;
+        color: #c5c5c5;
+      }
     }
     .icon-container{
       justify-self: center;
       &.left {
         grid-area: back-button;
+        cursor: pointer
       }
       &.rigth {
         grid-area: more;
@@ -39,7 +49,7 @@
     grid-area: writter;
     display: grid;
     align-items: center;
-    grid-template-columns: auto 40px;
+    grid-template-columns: auto 45px;
     grid-row: 100%;
     box-sizing: border-box;
     background-color: var(--background-accent);
@@ -59,8 +69,9 @@
   .send-message {
     grid-area: send;
     justify-self: end;
-    height: 37px;
-    width: 37px;
+    height: 43px;
+    width: 43px;
+    cursor: pointer;
     border: none;
     background-color: transparent;
     color: var(--accent);

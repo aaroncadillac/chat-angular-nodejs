@@ -10,6 +10,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { MessageScrollComponent } from './components/message-scroll/message-scroll.component';
 import { AddComponentDirective } from './directives/add-component.directive';
 import { LobbyComponent } from './components/lobby/lobby.component';
+import { ToggleThemeIconComponent } from './components/toggle-theme-icon/toggle-theme-icon.component';
+import { SessionManagerService } from './services/session-manager.service';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,14 @@ import { LobbyComponent } from './components/lobby/lobby.component';
     MessageScrollComponent,
     AddComponentDirective,
     LobbyComponent,
-    
+    ToggleThemeIconComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgMaterialIconModule
   ],
-  providers: [],
+  providers: [SessionManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

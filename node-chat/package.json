@@ -1,0 +1,14 @@
+{
+  "name": "node-chat",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

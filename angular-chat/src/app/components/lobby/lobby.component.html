@@ -2,10 +2,13 @@
   <nav class="header">
     <span class="title">Angular Chat</span>
     <div class="icon-container">
-      <ng-material-icon icon="brightness_medium" size="2" ></ng-material-icon>
+      <app-toggle-theme-icon></app-toggle-theme-icon>
     </div>
   </nav>
   <div class="userlist">
-    <span *ngFor="let usernameOfList of userlist" class="user">{{usernameOfList}}</span>
+    <div *ngFor="let usernameOfList of userlist" class="user-element" (click)="messageTo(usernameOfList)">
+      <span class="username">@{{usernameOfList}}</span>
+      <span *ngIf="historyNotifications[usernameOfList]" class="notification">{{historyNotifications[usernameOfList]}}</span>
+    </div>
   </div>
 </section>

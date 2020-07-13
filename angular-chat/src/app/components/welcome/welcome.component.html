@@ -1,6 +1,10 @@
 <div class="welcome-container">
+  <div class="icon-container">
+    <app-toggle-theme-icon></app-toggle-theme-icon>
+  </div>
   <div class="textarea">
     <span class="welcome-title">Ingresa tu usuario</span>
-    <input type="text" class="username-input">
+    <input type="text" #usernameInput class="username-input" (keyup.enter)="sendUsername(usernameInput.value)">
+    <span *ngIf="error" class="error">{{errorMessage}}</span>
   </div>
 </div>

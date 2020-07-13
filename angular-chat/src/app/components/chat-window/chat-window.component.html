@@ -1,17 +1,20 @@
 <section class="chat-container">
   <nav class="header">
-    <div class="icon-container left">
+    <div class="icon-container left" (click)="toLobby()">
       <ng-material-icon icon="arrow_back" size="2" ></ng-material-icon>
     </div>
-    <span class="username">Aarón</span>
+    <div class="username-area">
+      <span class="username">{{username}}</span>
+      <span class="typing-message" *ngIf="userTyping">{{typingMessage}}</span>
+    </div>
     <div class="icon-container rigth">
-      <ng-material-icon icon="more_vert" size="2" ></ng-material-icon>
+      <app-toggle-theme-icon></app-toggle-theme-icon>
     </div>
   </nav>
-  <app-message-scroll class="chat"></app-message-scroll>
+  <app-message-scroll class="chat" fromUser="{{username}}"></app-message-scroll>
   <footer class="writter">
-    <input type="text" name="" id="" class="textbox" placeholder="Mensaje">
-    <button class="send-message">
+    <input type="text" #messageInput class="textbox" placeholder="Mensaje" (keyup.enter)="sendMessage(messageInput.value)" (input)="typing()" (blur)="stopTyping()">
+    <button class="send-message" (click)="sendMessage(messageInput.value)">
       <ng-material-icon icon="send" size="2" ></ng-material-icon>
     </button>
   </footer>

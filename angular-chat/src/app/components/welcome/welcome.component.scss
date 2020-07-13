@@ -1,5 +1,6 @@
 .welcome-container{
   display: grid;
+  position: relative;
   align-items: center;
   justify-items: center;
   height: 100%;
@@ -9,14 +10,11 @@
     color: var(--text);
     .welcome-title {
       font-size: 1.1rem;
-      text-align: center;
-      display: block;
     }
     .username-input {
       background-color: transparent;
       font-size: 1.3rem;
       margin-top: 15px;
-      text-align: center;
       font-weight: 200;
       padding-bottom: 2px;
       border: none;
@@ -26,5 +24,20 @@
         outline: none;
       }
     }
+    .error {
+      margin-top: 10px;
+    }
+    & * {
+      text-align: center;
+      display: block;
+    }
+  }
+  .icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .error {
+    color: var(--warning)
   }
 }
