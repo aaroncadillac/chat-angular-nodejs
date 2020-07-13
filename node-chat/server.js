@@ -4,7 +4,9 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server, { origins: '*:*'});
 const port = process.env.PORT || 5000;
 
-app.use(express.static('public'))
+app.use('/', express.static('public'))
+app.use('/*', express.static('public'))
+
 var usersList = {}
 
 server.listen(port, () => {
