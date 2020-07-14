@@ -12,6 +12,7 @@ export class LobbyComponent implements OnInit {
   public userlist: Array<string> = []
   public historyNotifications: object = {};
   private socket: any;
+  public lobbyEmptyMessage: string = ':( Lo sentimos, no hay más usuarios, invita a tus amigos a unirse';
 
   constructor(private socketService: SocketService, private router: Router, private history: HistoryService) {
     this.userlist = socketService.usersList

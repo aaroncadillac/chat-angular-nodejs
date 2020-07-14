@@ -10,5 +10,8 @@
       <span class="username">@{{usernameOfList}}</span>
       <span *ngIf="historyNotifications[usernameOfList]" class="notification">{{historyNotifications[usernameOfList]}}</span>
     </div>
+    <span *ngIf="!userlist.length"class="nobody-at-lobby">
+      {{lobbyEmptyMessage}}
+    </span>
   </div>
 </section>

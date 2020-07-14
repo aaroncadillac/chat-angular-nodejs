@@ -58,5 +58,13 @@
         background-color: var(--secondary-accent);
       }
     }
+    .nobody-at-lobby {
+      color: var(--text);
+      height: 100%;
+      width: 100%;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
